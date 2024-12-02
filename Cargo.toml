@@ -1,0 +1,20 @@
+[package]
+name = "advent2024"
+version = "0.1.0"
+edition = "2021"
+
+# See more keys and their definitions at https://doc.rust-lang.org/cargo/reference/manifest.html
+
+[dependencies]
+
+[lib]
+name = "utils"
+path = "utils/lib.rs"
+
+[[bin]]
+name = "day01"
+path = "day01/main.rs"
+
+[[bin]]
+name = "day02"
+path = "day02/main.rs"
