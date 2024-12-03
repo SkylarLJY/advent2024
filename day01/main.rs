@@ -41,5 +41,5 @@ fn main() {
         let freq = list2_freq_map.get(num).unwrap_or(&0);
         score += freq * *num;
     }
-    println!("Score: {}", score); 
+    println!("Score: {}", score);
 }
