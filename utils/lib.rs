@@ -27,7 +27,13 @@ impl Point {
         Point::new(self.i + other.i, self.j + other.j)
     }
 
-    
+    pub fn minus(&self, other: &Point) -> Point {
+        Point::new(self.i - other.i, self.j - other.j)
+    }
+
+    pub fn in_bound(&self, input: &Vec<Vec<char>>) -> bool {
+        self.i >= 0 && self.i < input.len() as i32 && self.j >= 0 && self.j < input[0].len() as i32
+    }
 }
 
 #[derive(Debug, Clone, Copy, PartialEq)]
