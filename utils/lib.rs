@@ -1,5 +1,5 @@
 use std::fs;
-
+use strum_macros::EnumIter; 
 pub fn read_input(filename: &str) -> String {
     fs::read_to_string(filename).expect("Unable to read input file")
 }
@@ -31,12 +31,12 @@ impl Point {
         Point::new(self.i - other.i, self.j - other.j)
     }
 
-    pub fn in_bound(&self, input: &Vec<Vec<char>>) -> bool {
+    pub fn in_bound<T>(&self, input: &Vec<Vec<T>>) -> bool {
         self.i >= 0 && self.i < input.len() as i32 && self.j >= 0 && self.j < input[0].len() as i32
     }
 }
 
-#[derive(Debug, Clone, Copy, PartialEq)]
+#[derive(Debug, Clone, Copy, PartialEq, EnumIter)]
 pub enum Direction {
     Up,
     Down,

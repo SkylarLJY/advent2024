@@ -7,6 +7,8 @@ edition = "2021"
 
 [dependencies]
 regex = "1"
+strum = "0.26"
+strum_macros = "0.26"
 
 [lib]
 name = "utils"
@@ -43,3 +45,11 @@ path = "day07/main.rs"
 [[bin]]
 name = "day08"
 path = "day08/main.rs"
+
+[[bin]]
+name = "day09"
+path = "day09/main.rs"
+
+[[bin]]
+name = "day10"
+path = "day10/main.rs"
