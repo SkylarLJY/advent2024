@@ -34,6 +34,9 @@ impl Point {
     pub fn in_bound<T>(&self, input: &Vec<Vec<T>>) -> bool {
         self.i >= 0 && self.i < input.len() as i32 && self.j >= 0 && self.j < input[0].len() as i32
     }
+    pub fn get_in_map<'a, T>(&self,input: &'a Vec<Vec<T>>) -> &'a T {
+        &input[self.i as usize][self.j as usize]
+    }
 }
 
 #[derive(Debug, Clone, Copy, PartialEq, EnumIter)]
